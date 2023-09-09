@@ -35,13 +35,15 @@ def fibonacci(n):
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
 
-n = int(input("Digite um número para calcular o termo correspondente na série de Fibonacci: "))
+n = int(input("Insira um número: "))
 
 if n < 0:
     print("O número deve ser maior ou igual a zero.")
 else:
-    resultado = fibonacci(n)
-    print(f'O termo de Fibonacci F({n}) é igual a {resultado}.')
+    print("Sequência de Fibonacci até o termo F(" + str(n) + "):")
+    for i in range(n + 1):
+        resultado = fibonacci(i)
+        print(f'F({i}) = {resultado}')
 
 """Atividade 4
 Faça um programa para listar todos os divisores de um número ou dizer que o número é primo caso não existam divisores Ao final, verifique se o usuário deseja analisar outro número
