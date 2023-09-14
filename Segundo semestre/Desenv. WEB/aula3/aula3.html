@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Hotelzin</h1>
+        <h3>Formulário de reserva do hotel</h3>
+    </header>
+   <main>
+        <form action="processar_reserva.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="sexo">Sexo:</label>
+            <input type="radio" id="masculino" name="sexo" value="Masculino"> <label for="masculino">Masculino</label>
+            <input type="radio" id="feminino" name="sexo" value="Feminino"> <label for="feminino">Feminino</label>
+            <input type="radio" id="outro" name="sexo" value="Outro"> <label for="outro">Outro</label><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="data_chegada">Data de Chegada:</label>
+            <input type="date" id="data_chegada" name="data_chegada" required><br><br>
+
+            <label for="num_noites">Número de Noites:</label>
+            <input type="number" id="num_noites" name="num_noites" min="1" max="10" required><br><br>
+
+            <label for="num_hospedes">Número de Hóspedes:</label>
+            <input type="number" id="num_hospedes" name="num_hospedes" min="1" max="3" required><br><br>
+
+            <label for="quartos">Selecione um quarto:</label>
+            <select id="quartos" name="quartos">
+                <option value="1">---------</option>
+                <option value="2">Quarto Standard</option>
+                <option value="4">Quarto Duplo</option>
+                <option value="5">Quarto Triplo</option>
+                <option value="6">Suite Master</option>
+            </select> <br><br>
+
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+   </main>
+</body>
+</html>
